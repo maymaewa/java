@@ -1,6 +1,11 @@
 package com.oop;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 import javax.persistence.*;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.Past;
+import javax.validation.constraints.Size;
 
 @Entity
 @Table(name = "`schedule`")
@@ -11,7 +16,13 @@ public class Concert {
     @Column(name = "`concertId`")
     private int id;
 
+
+    @DateTimeFormat(pattern="dd-MMM-yyyy")
+    @NotEmpty(message = "Time should not be empty")
     private String time;
+
+    @NotEmpty(message = "City should not be empty")
+    @Size(min =2, max = 30, message = "City should be between 2 and 30 characters")
     private String city;
 
 

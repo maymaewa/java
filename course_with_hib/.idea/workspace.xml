@@ -10,8 +10,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
+        <option value="Interface" />
         <option value="HTML File" />
+        <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -32,6 +34,8 @@
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/java" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Project" />
@@ -40,11 +44,19 @@
     <property name="settings.editor.selected.configurable" value="configurable.group.build" />
   </component>
   <component name="RecentsManager">
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.oop" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\mayma\IdeaProjects\course_with_hib\src\main\resources" />
+      <recent name="C:\Users\mayma\IdeaProjects\course_with_hib\src\main\resources\templates" />
+      <recent name="C:\Users\mayma\IdeaProjects\course_with_hib\src\test\java\com\oop" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.GreetingControllerTest.groupListTest">
     <configuration name="Unnamed" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.oop.Main" />
       <module name="course_with_hib" />
@@ -60,6 +72,44 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="GreetingControllerTest.groupListTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="course_with_hib" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.oop.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.oop" />
+      <option name="MAIN_CLASS_NAME" value="com.oop.GreetingControllerTest" />
+      <option name="METHOD_NAME" value="groupListTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GreetingControllerTest.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="course_with_hib" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.oop.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.oop" />
+      <option name="MAIN_CLASS_NAME" value="com.oop.GreetingControllerTest" />
+      <option name="METHOD_NAME" value="test" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.GreetingControllerTest.groupListTest" />
+        <item itemvalue="JUnit.GreetingControllerTest.test" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -87,10 +137,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="270" y="22" width="1089" height="774" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1616321222815" />
-    <state x="574" y="96" key="#com.intellij.ide.util.MemberChooser" timestamp="1617916728239">
+    <state x="574" y="96" key="#com.intellij.ide.util.MemberChooser" timestamp="1620665322794">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="574" y="96" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1617916728239" />
+    <state x="574" y="96" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1620665322794" />
     <state x="548" y="260" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1616321204337">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -99,10 +149,14 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="503" y="101" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog/0.0.1536.824@0.0.1536.824" timestamp="1616076335827" />
-    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1617917056702">
+    <state x="256" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1620148567230">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1617917056702" />
+    <state x="256" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.824@0.0.1536.824" timestamp="1620148567230" />
+    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1619792892958">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1619792892958" />
     <state x="445" y="170" key="DBNavigator.ConnectionFilterSettingsDialog" timestamp="1616605798822">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -111,54 +165,58 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="349" y="127" key="DBNavigator.DatasetFilterDialog/0.0.1536.824@0.0.1536.824" timestamp="1616606054380" />
-    <state x="489" y="313" width="558" height="248" key="DBNavigator.IdleConnectionDialog" timestamp="1616618229668">
+    <state x="489" y="313" width="558" height="248" key="DBNavigator.IdleConnectionDialog" timestamp="1621458268867">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="489" y="313" width="558" height="248" key="DBNavigator.IdleConnectionDialog/0.0.1536.824@0.0.1536.824" timestamp="1616618229668" />
-    <state x="299" y="67" key="DBNavigator.ProjectSettingsDialog" timestamp="1617225669165">
+    <state x="489" y="313" width="558" height="248" key="DBNavigator.IdleConnectionDialog/0.0.1536.824@0.0.1536.824" timestamp="1621458268867" />
+    <state x="429" y="182" key="DBNavigator.PendingTransactionsDialog" timestamp="1621460447845">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="299" y="67" key="DBNavigator.ProjectSettingsDialog/0.0.1536.824@0.0.1536.824" timestamp="1617225669165" />
+    <state x="429" y="182" key="DBNavigator.PendingTransactionsDialog/0.0.1536.824@0.0.1536.824" timestamp="1621460447845" />
+    <state x="598" y="72" key="DBNavigator.ProjectSettingsDialog" timestamp="1621460729060">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="598" y="72" key="DBNavigator.ProjectSettingsDialog/0.0.1536.824@0.0.1536.824" timestamp="1621460729060" />
     <state x="549" y="154" key="FileChooserDialogImpl" timestamp="1618764841037">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="549" y="154" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1618764841037" />
-    <state width="677" height="236" key="GridCell.Tab.0.bottom" timestamp="1619105172327">
+    <state width="841" height="329" key="GridCell.Tab.0.bottom" timestamp="1621462495293">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="677" height="236" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1619105172327" />
-    <state width="677" height="236" key="GridCell.Tab.0.center" timestamp="1619105172327">
+    <state width="841" height="329" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1621462495293" />
+    <state width="841" height="329" key="GridCell.Tab.0.center" timestamp="1621462495293">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="677" height="236" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1619105172327" />
-    <state width="677" height="236" key="GridCell.Tab.0.left" timestamp="1619105172327">
+    <state width="841" height="329" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1621462495293" />
+    <state width="841" height="329" key="GridCell.Tab.0.left" timestamp="1621462495293">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="677" height="236" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1619105172327" />
-    <state width="677" height="236" key="GridCell.Tab.0.right" timestamp="1619105172327">
+    <state width="841" height="329" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1621462495293" />
+    <state width="841" height="329" key="GridCell.Tab.0.right" timestamp="1621462495293">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="677" height="236" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1619105172327" />
-    <state width="1172" height="260" key="GridCell.Tab.1.bottom" timestamp="1619022012552">
+    <state width="841" height="329" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1621462495293" />
+    <state width="841" height="329" key="GridCell.Tab.1.bottom" timestamp="1621462495293">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1172" height="260" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1619022012552" />
-    <state width="1172" height="260" key="GridCell.Tab.1.center" timestamp="1619022012552">
+    <state width="841" height="329" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1621462495293" />
+    <state width="841" height="329" key="GridCell.Tab.1.center" timestamp="1621462495293">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1172" height="260" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1619022012552" />
-    <state width="1172" height="260" key="GridCell.Tab.1.left" timestamp="1619022012552">
+    <state width="841" height="329" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1621462495293" />
+    <state width="841" height="329" key="GridCell.Tab.1.left" timestamp="1621462495293">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1172" height="260" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1619022012552" />
-    <state width="1172" height="260" key="GridCell.Tab.1.right" timestamp="1619022012552">
+    <state width="841" height="329" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1621462495293" />
+    <state width="841" height="329" key="GridCell.Tab.1.right" timestamp="1621462495293">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1172" height="260" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1619022012552" />
-    <state x="299" y="67" key="Maven.ArtifactSearchDialog" timestamp="1618913191577">
+    <state width="841" height="329" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1621462495293" />
+    <state x="299" y="67" key="Maven.ArtifactSearchDialog" timestamp="1621446721678">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="299" y="67" key="Maven.ArtifactSearchDialog/0.0.1536.824@0.0.1536.824" timestamp="1618913191577" />
+    <state x="299" y="67" key="Maven.ArtifactSearchDialog/0.0.1536.824@0.0.1536.824" timestamp="1621446721678" />
     <state x="498" y="0" key="SettingsEditor" timestamp="1618764978888">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -171,22 +229,70 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="584" y="190" key="chooseDestDirectoryDialog/0.0.1536.824@0.0.1536.824" timestamp="1615994890649" />
-    <state x="465" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1618692284763">
+    <state x="465" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1621506950865">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="465" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1618692284763" />
+    <state x="465" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1621506950865" />
+    <state x="540" y="131" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1621442922222">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="540" y="131" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1536.824@0.0.1536.824" timestamp="1621442922222" />
     <state x="209" y="108" key="new project wizard" timestamp="1615998636795">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="209" y="108" key="new project wizard/0.0.1536.824@0.0.1536.824" timestamp="1615998636795" />
+    <state x="925" y="190" key="run.anything.popup" timestamp="1620664720343">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="925" y="190" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1620664720343" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/oop/GreetingController.java</url>
-          <line>84</line>
-          <option name="timeStamp" value="7" />
+          <url>file://$PROJECT_DIR$/src/main/java/com/oop/PersonController.java</url>
+          <line>37</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/oop/PersonController.java</url>
+          <line>74</line>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/oop/PersonController.java</url>
+          <line>75</line>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/oop/PersonController.java</url>
+          <line>76</line>
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/oop/PersonController.java</url>
+          <line>77</line>
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/oop/PersonController.java</url>
+          <line>45</line>
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/oop/PersonController.java</url>
+          <line>49</line>
+          <option name="timeStamp" value="18" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/oop/PersonController.java</url>
+          <line>51</line>
+          <option name="timeStamp" value="19" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/oop/PersonController.java</url>
+          <line>53</line>
+          <option name="timeStamp" value="20" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

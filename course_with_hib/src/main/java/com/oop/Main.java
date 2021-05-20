@@ -1,12 +1,4 @@
 package com.oop;
-import org.hibernate.Session;
-import org.hibernate.SessionFactory;
-import org.hibernate.cfg.Configuration;
-
-import  javax.persistence.*;
-import java.util.ArrayList;
-import java.util.List;
-
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -45,7 +37,7 @@ public class Main {
 
 
 
-        SessionFactory factory = new Configuration()
+        /*SessionFactory factory = new Configuration()
                 .configure("hibernate.cfg.xml")
                 .addAnnotatedClass(Group.class)
                 .addAnnotatedClass(Person.class)
@@ -69,13 +61,9 @@ public class Main {
 
             Group firstGroup = new Group("Hell", 1986,111,2000, 12);
             Hit.addGroupInTop(firstGroup);
-            firstGroup.addName(firstPerson);
-            firstGroup.addName(secondPerson);
+            //firstGroup.addName(firstPerson);
+            //firstGroup.addName(secondPerson);
 
-            firstGroup.addTrack(firstTrack);
-
-            firstGroup.addConcert(firstConcert);
-            firstGroup.addConcert(secondConcert);
 			session.beginTransaction();
 
 			// save
@@ -84,7 +72,7 @@ public class Main {
             session.save(firstPerson);
             session.save(secondPerson);
             session.save(firstConcert);
-            session.save(secondConcert);*/
+            session.save(secondConcert);
 
 			// commit transaction
 			session.getTransaction().commit();
@@ -93,7 +81,7 @@ public class Main {
         }
         finally {
             factory.close();
-        }
+        }*/
 
     }
 }

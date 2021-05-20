@@ -1,5 +1,7 @@
 package com.oop;
 import javax.persistence.*;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.Size;
 
 @Entity
 @Table(name = "`composition`")
@@ -11,6 +13,8 @@ public class Person {
 
 
     @Column(name = "`names`")
+    @NotEmpty(message = "Name should not be empty")
+    @Size(min =2, max = 30, message = "Name should be between 2 and 30 characters")
     private String name;
 
     @ManyToOne

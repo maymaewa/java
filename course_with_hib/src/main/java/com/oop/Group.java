@@ -2,6 +2,10 @@ package com.oop;
 import org.hibernate.engine.internal.Cascade;
 
 import javax.persistence.*;
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.Size;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -16,25 +20,25 @@ public class Group {
     private int id;
 
 
+    @NotEmpty(message = "Name should not be empty")
+    @Size(min =2, max = 30, message = "Name should be between 2 and 30 characters")
     private String name;
 
-    @OneToMany (targetEntity=Person.class, cascade = CascadeType.ALL, mappedBy="group", fetch=FetchType.LAZY, orphanRemoval=true)
-    private List<Person> composition = new ArrayList<Person>();
+    /*@OneToMany (targetEntity=Person.class, cascade = CascadeType.ALL, mappedBy="group", fetch=FetchType.LAZY, orphanRemoval=true)
+    private List<Person> composition = new ArrayList<Person>();*/
 
+    @Min(value = 1900, message = "Year should be greater than 1900")
+    @Max( value = 2021, message = "Year should be smaller than 2021")
     private int year;
 
+    @Min(value = 1, message = "Rating should be greater than 1")
     private int rating;
 
+    @Min(value = 1, message = "Count of tickets should be greater than 1")
     private int tickets;
 
+    @Min(value = 1, message = "Count of concerts should be greater than 1")
     private int countOfConcerts;
-
-
-    @OneToMany (targetEntity=Concert.class, cascade = CascadeType.ALL, mappedBy="group", fetch=FetchType.LAZY, orphanRemoval=true)
-    private List<Concert> schedule = new ArrayList<Concert>();
-
-    @OneToMany (targetEntity=Track.class, cascade = CascadeType.ALL, mappedBy="group", fetch=FetchType.LAZY, orphanRemoval=true)
-    private List<Track> repertoire = new ArrayList<Track>();
 
     public Group(){
     }
@@ -72,17 +76,8 @@ public class Group {
         return countOfConcerts;
     }
 
-    public void setCountOfConcert(int countOfConcerts) {
+    public void setCountOfConcerts(int countOfConcerts) {
         this.countOfConcerts = countOfConcerts;
-    }
-
-
-
-    public void getInfo(){
-        System.out.println(name + " " + year);
-    }
-
-    public void setInfo() {
     }
 
 
@@ -106,22 +101,6 @@ public class Group {
     }
 
 
-
-    @Transient
-    public List<Person> getComposition() {
-        return composition;
-    }
-
-    public void setComposition(List<Person> composition) {
-        this.composition = composition;
-
-    }
-
-    public void addName(Person person) {
-        composition.add(person);
-        person.setGroup(this);
-    }
-
     @Column(name = "`rating`")
     public int getRating() {
         return rating;
@@ -131,22 +110,4 @@ public class Group {
         this.rating = rating;
     }
 
-    @Transient
-    public List<Concert> getSchedule() {
-        return schedule;
-    }
-
-    public void setSchedule(ArrayList<Concert> schedule) {
-        this.schedule = schedule;
-    }
-
-    public void addConcert(Concert concert) {
-        schedule.add(concert);
-        concert.setGroup(this);
-    }
-
-    public void addTrack(Track track) {
-        repertoire.add(track);
-        track.setGroup(this);
-    }
 }

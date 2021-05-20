@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <title>Groups</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}">
+</head>
+<body>
+<div class="container">
+    <h1>Concerts</h1>
+    <a th:href="'/'"><h2>Groups</h2></a>
+</div>
+<div class="container">
+    <form method="post" action="filterConcerts">
+        <label class="col-form-label">Filter by name of group</label>
+        <input type="text" name = "filter">
+        <button type="submit">Find</button>
+    </form>
+</div>
+<div class="container">
+    <h2><a th:href="'/concerts/new'">Add new concert</a></h2>
+</div>
+<div class="container text-center">
+    <table class="table table-bordered">
+        <thead class="thead-dark">
+        <th>Id</th>
+        <th>City</th>
+        <th>Time</th>
+        <th>group</th>
+        <th>Edit</th>
+        <th>Delete</th>
+        </thead>
+        <tbody>
+        <tr th:each ="concert : ${concerts}">
+            <th th:utext="${concert.id}"></th>
+            <th th:utext="${concert.city}"></th>
+            <th th:utext="${concert.time}"></th>
+            <th th:utext="${concert.group.name}"></th>
+            <th><a th:href="'/concerts/'+${concert.id}+'edit'">Edit</a></th>
+            <th><a th:href="'/concerts/'+${concert.id}+'delete'">Delete</a></th>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+</body>
+</html>

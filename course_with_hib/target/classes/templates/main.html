@@ -3,25 +3,38 @@
 <head>
     <meta charset="UTF-8" />
     <title>Groups</title>
-    <link rel="stylesheet" type="text/css" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}">
+    <link rel="stylesheet" type="text/css" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}"/>
 </head>
 <body>
-    <div>
-        <form method="post">
-            <input type="text" name="name" placeholder="Name of new group">
-            <input type="number" name="year" placeholder="Year of new group">
-            <input type="number" name="rating" placeholder="Rating of new group">
-            <input type="number" name="tickets" placeholder="Tickets of new group">
-            <input type="number" name="countOfConcerts" placeholder="Count of concerts">
-            <button type="submit">Add</button>
-        </form>
-    </div>
-    <div class="container">
+    <div class="container text-center">
      <h1>Hit Parade</h1>
     </div>
+
     <div class="container">
+        <h2><a th:href="'/persons'">Composition</a></h2>
+    </div>
+    <div class="container">
+        <h2><a th:href="'/tracks'">Repertoire</a></h2>
+    </div>
+    <div class="container">
+        <h2><a th:href="'/concerts'">Schedule</a></h2>
+    </div>
+
+    <div class="container">
+        <h2><a th:href="'/new'">Add new group</a></h2>
+    </div>
+
+    <div class="container">
+        <h2><a th:href="'/export'">Export to pdf</a></h2>
+    </div>
+
+
+
+
+    <div class="container">
+        <p>Find by name</p>
     <form method="post" action="filter">
-        <input type="text" name = "filter">
+        <input type="text" name = "filter"/>
         <button type="submit">Find</button>
     </form>
     </div>
@@ -37,7 +50,7 @@
                     <th>Edit</th>
                     <th>Delete</th>
                 </thead>
-                <tbody>
+                <tbody id="groups-list">
                 <tr th:each ="group : ${groups}">
                     <th th:utext="${group.id}"></th>
                     <th th:utext="${group.name}"></th>
@@ -54,6 +67,7 @@
                 </tr>
                 </tbody>
             </table>
+
         </div>
 
 </body>
