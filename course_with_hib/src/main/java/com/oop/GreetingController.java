@@ -5,6 +5,8 @@ import com.oop.repos.GroupRepo;
 import com.oop.repos.PersonRepo;
 import com.oop.repos.TrackRepo;
 import org.apache.catalina.filters.ExpiresFilter;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -35,8 +37,11 @@ public class GreetingController {
     @Autowired
     private TrackRepo trackRepo;
 
+    Logger logger = LoggerFactory.getLogger(GreetingController.class);
+
     @GetMapping
     public String main(Model model){
+        logger.trace("Main method accessed");
         Iterable<Group> groups = groupRepo.findByOrderByRatingAsc();
         model.addAttribute("groups", groups);
         return "main";
@@ -44,12 +49,15 @@ public class GreetingController {
 
     @PostMapping("filter")
     public String filter(@RequestParam String filter, Model model){
+        logger.trace("filter method accessed");
         Iterable<Group> groups;
         if (filter != null && !filter.isEmpty()){
+            logger.trace("Found");
             groups = groupRepo.findByName(filter);
         }
         else{
             groups = groupRepo.findAll();
+            logger.trace("Not found");
         }
         model.addAttribute("groups", groups);
         return "main";
@@ -58,7 +66,9 @@ public class GreetingController {
 
     @GetMapping("/{id}edit")
     public String groupEdit(@PathVariable(value = "id") int id, Model model){
+        logger.trace("groupEdit method accessed");
         if(!groupRepo.existsById(id)) {
+            logger.trace("This group not found");
             return "redirect:/main";
         }
         Group group = groupRepo.findById(id).get();
@@ -69,6 +79,7 @@ public class GreetingController {
 
     @GetMapping("/new")
     public String addNewGroup(Model model){
+        logger.trace("addNewGroup method accessed");
         Iterable<Group> groups = groupRepo.findAll();
         model.addAttribute("group", new Group());
 
@@ -77,7 +88,9 @@ public class GreetingController {
 
     @PostMapping("/save")
     public String saveGroup(@Valid Group group, BindingResult bindingResult, Model model){
+        logger.trace("saveGroup method accessed");
         if( bindingResult.hasErrors()) {
+            logger.error("Errors found");
             model.addAttribute("group", group);
             return "group-new";
         }
@@ -89,27 +102,56 @@ public class GreetingController {
 
     @PostMapping("/{id}remove")
     public String groupDelete(@PathVariable(value = "id") Group group, Model model){
+        logger.trace("groupDelete method accessed");
+
         Iterable<Person> persons = personRepo.findByGroup(group);
         for(Person p : persons){
             personRepo.delete(p);
         }
+        logger.trace("groups composition was removed");
 
         Iterable<Track> tracks = trackRepo.findByGroup(group);
         for(Track p : tracks){
             trackRepo.delete(p);
         }
+        logger.trace("groups repertoire removed");
 
         Iterable<Concert> concerts = concertRepo.findByGroup(group);
         for(Concert p : concerts){
             concertRepo.delete(p);
         }
 
+        logger.trace("groups schedule was removed");
         groupRepo.delete(group);
+        logger.trace("group was removed");
         return "redirect:";
     }
 
+
+    @GetMapping("/{id}info")
+    public String groupInfo(@PathVariable(value = "id") int id, Model model){
+        logger.trace("groupInfo method accessed");
+        if(!groupRepo.existsById(id)) {
+            logger.trace("This group not found");
+            return "redirect:/main";
+        }
+        Group group = groupRepo.findById(id).get();
+        Iterable<Person> persons = personRepo.findByGroup(group);
+        Iterable<Track> tracks = trackRepo.findByGroup(group);
+        Iterable<Concert> concerts = concertRepo.findByGroup(group);
+        model.addAttribute("group", group);
+        model.addAttribute("persons", persons);
+        model.addAttribute("tracks", tracks);
+        model.addAttribute("concerts", concerts);
+        return "group-info";
+    }
+
+
+
     @GetMapping("/export")
     public void exportToPdf(HttpServletResponse response) throws IOException {
+        logger.trace("exportToPdf method accessed");
+
         response.setContentType("application/pdf");
 
         DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd_HH:mm:ss");
@@ -124,8 +166,6 @@ public class GreetingController {
         GroupPDFExporter exporter= new GroupPDFExporter(groups);
         exporter.export(response);
     }
-
-
 
 
 }

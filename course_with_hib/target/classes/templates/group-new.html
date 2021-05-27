@@ -14,7 +14,7 @@
 </div>
 <div class="container">
     <form th:action="@{/save}" th:object="${group}" method="post"
-          style="max-width: 600px; margin: 0 auto;">
+        style="max-width: 600px; margin: 0 auto;">
         <input type="hidden" th:field="*{id}" th:value="${group.id}"/>
 
         <div class="form-group row">

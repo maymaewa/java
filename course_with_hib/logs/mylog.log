@@ -1,0 +1,25 @@
+2021-05-28 00:04:05.062 TRACE 21388 --- [http-nio-8081-exec-8] com.oop.GreetingController               : Main method accessed
+2021-05-28 00:05:27.286 TRACE 21388 --- [http-nio-8081-exec-1] com.oop.GreetingController               : groupInfo method accessed
+2021-05-28 00:05:30.033 TRACE 21388 --- [http-nio-8081-exec-7] com.oop.GreetingController               : Main method accessed
+2021-05-28 00:05:41.662 TRACE 21388 --- [http-nio-8081-exec-9] com.oop.GreetingController               : groupInfo method accessed
+2021-05-28 00:05:45.331 TRACE 21388 --- [http-nio-8081-exec-3] com.oop.GreetingController               : groupInfo method accessed
+2021-05-28 00:05:59.207 TRACE 21388 --- [http-nio-8081-exec-8] com.oop.GreetingController               : groupEdit method accessed
+2021-05-28 00:06:00.719 TRACE 21388 --- [http-nio-8081-exec-9] com.oop.GreetingController               : saveGroup method accessed
+2021-05-28 00:06:00.758 TRACE 21388 --- [http-nio-8081-exec-10] com.oop.GreetingController               : Main method accessed
+2021-05-28 00:06:05.249 TRACE 21388 --- [http-nio-8081-exec-3] com.oop.GreetingController               : groupEdit method accessed
+2021-05-28 00:06:09.192 TRACE 21388 --- [http-nio-8081-exec-6] com.oop.GreetingController               : saveGroup method accessed
+2021-05-28 00:06:09.193 ERROR 21388 --- [http-nio-8081-exec-6] com.oop.GreetingController               : Errors found
+2021-05-28 00:06:19.183 TRACE 21388 --- [http-nio-8081-exec-4] com.oop.GreetingController               : saveGroup method accessed
+2021-05-28 00:06:19.552 TRACE 21388 --- [http-nio-8081-exec-10] com.oop.GreetingController               : Main method accessed
+2021-05-28 00:06:30.363 TRACE 21388 --- [http-nio-8081-exec-2] com.oop.GreetingController               : groupEdit method accessed
+2021-05-28 00:06:41.097 TRACE 21388 --- [http-nio-8081-exec-8] com.oop.GreetingController               : saveGroup method accessed
+2021-05-28 00:06:41.098 ERROR 21388 --- [http-nio-8081-exec-8] com.oop.GreetingController               : Errors found
+2021-05-28 00:06:51.583 TRACE 21388 --- [http-nio-8081-exec-1] com.oop.GreetingController               : saveGroup method accessed
+2021-05-28 00:06:51.584 ERROR 21388 --- [http-nio-8081-exec-1] com.oop.GreetingController               : Errors found
+2021-05-28 00:07:29.274 TRACE 21388 --- [http-nio-8081-exec-9] com.oop.GreetingController               : Main method accessed
+2021-05-28 00:07:34.856 TRACE 21388 --- [http-nio-8081-exec-10] com.oop.GreetingController               : Main method accessed
+2021-05-28 00:07:38.056 TRACE 21388 --- [http-nio-8081-exec-3] com.oop.GreetingController               : groupInfo method accessed
+2021-05-28 00:07:40.378 TRACE 21388 --- [http-nio-8081-exec-5] com.oop.GreetingController               : Main method accessed
+2021-05-28 00:07:46.913 TRACE 21388 --- [http-nio-8081-exec-9] com.oop.GreetingController               : Main method accessed
+2021-05-28 00:07:52.067 TRACE 21388 --- [http-nio-8081-exec-3] com.oop.GreetingController               : addNewConcert method accessed
+2021-05-28 00:08:30.026 TRACE 21388 --- [http-nio-8081-exec-9] com.oop.GreetingController               : groupEdit method accessed

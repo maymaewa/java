@@ -51,9 +51,9 @@
                     <th>Delete</th>
                 </thead>
                 <tbody id="groups-list">
-                <tr th:each ="group : ${groups}">
+                <tr th:each ="group : ${groups}" th:attr="data-id=${group.id}">
                     <th th:utext="${group.id}"></th>
-                    <th th:utext="${group.name}"></th>
+                    <th><a th:utext="${group.name}" th:href="'/'+${group.id}+'info'">Edit</a></th>
                     <th th:utext="${group.year}"></th>
                     <th th:utext="${group.rating}"></th>
                     <th th:utext="${group.tickets}"></th>

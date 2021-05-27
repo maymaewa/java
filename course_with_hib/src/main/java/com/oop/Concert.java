@@ -7,6 +7,8 @@ import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.Past;
 import javax.validation.constraints.Size;
 
+
+
 @Entity
 @Table(name = "`schedule`")
 public class Concert {
@@ -72,3 +74,9 @@ public class Concert {
         this.group = group;
     }
 }
+
+/*
+@startuml
+-id
+@enduml
+ */

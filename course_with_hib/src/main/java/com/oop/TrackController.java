@@ -2,6 +2,8 @@ package com.oop;
 
 import com.oop.repos.GroupRepo;
 import com.oop.repos.TrackRepo;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -23,8 +25,11 @@ public class TrackController {
     @Autowired
     private GroupRepo groupRepo;
 
+    Logger logger = LoggerFactory.getLogger(GreetingController.class);
+
     @GetMapping("/tracks")
     public String main(Model model){
+        logger.trace("Main method accessed");
         Iterable<Group> groups = groupRepo.findAll();
         Iterable<Track> tracks = trackRepo.findAll();
         model.addAttribute("tracks", tracks);
@@ -33,6 +38,7 @@ public class TrackController {
     }
     @GetMapping("/tracks/new")
     public String addNewTrack(Model model){
+        logger.trace("addNewTrack method accessed");
         Iterable<Group> groups = groupRepo.findAll();
         model.addAttribute("track", new Track());
         model.addAttribute("groups", groups);
@@ -42,7 +48,9 @@ public class TrackController {
 
     @PostMapping("/tracks/save")
     public String savePerson(@Valid Track track, BindingResult bindingResult, Model model){
+        logger.trace("savePerson method accessed");
         if( bindingResult.hasErrors()) {
+            logger.error("Errors found");
             Iterable<Group> groups = groupRepo.findAll();
             model.addAttribute("track", track);
             model.addAttribute("groups", groups);
@@ -55,11 +63,14 @@ public class TrackController {
 
     @PostMapping("filterTrack")
     public String filterTrack(@RequestParam String filter, Model model){
+        logger.trace("filterTrack method accessed");
         Iterable<Track> tracks;
         if (filter != null && !filter.isEmpty()){
+            logger.trace("Found");
             tracks = trackRepo.findByName(filter);
         }
         else{
+            logger.trace("Not found");
             tracks = trackRepo.findAll();
         }
         model.addAttribute("tracks", tracks);
@@ -68,7 +79,9 @@ public class TrackController {
 
     @GetMapping("/tracks/{id}edit")
     public String trackEdit(@PathVariable(value = "id") int id, Model model){
+        logger.trace("trackEdit method accessed");
         if(!trackRepo.existsById(id)) {
+            logger.trace("This concert not found");
             return "redirect:/tracks";
         }
         Track track = trackRepo.findById(id).get();
@@ -80,6 +93,7 @@ public class TrackController {
 
     @GetMapping("/tracks/{id}delete")
     public String trackDelete(@PathVariable(value = "id") int id, Model model){
+        logger.trace("trackDelete method accessed");
 
         trackRepo.deleteById(id);
 

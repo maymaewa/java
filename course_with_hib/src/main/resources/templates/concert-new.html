@@ -28,7 +28,7 @@
         <div class="form-group row">
             <label class="col-form-label col-sm-4">Time</label>
             <div class="col-sm-8">
-                <input type="text" name="time" placeholder="Time" th:field="*{time}" class="form-control" required>
+                <input type="date" name="time" placeholder="Time" th:field="*{time}" class="form-control" required>
             </div>
             <div th:if="${#fields.hasErrors('time')}" th:errors="*{time}">Name error</div>
         </div>

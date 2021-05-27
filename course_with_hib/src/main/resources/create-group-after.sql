@@ -1,1 +1,1 @@
-delete from `groups` where idgroups > 1;
+delete from `groups` where idgroups >= 1;

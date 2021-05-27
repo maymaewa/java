@@ -1,1 +1,1 @@
-insert into `groups` (name, year, rating, tickets, count_of_concerts) values ('Moon', 2017, 61, 12000, 20), ('Grechka', 2010, 1, 120, 2);;
+insert into `groups` (idgroups, name, year, rating, tickets, count_of_concerts) values (1, 'Moon', 2017, 61, 12000, 20), (2, 'Grechka', 2010, 1, 120, 2);
